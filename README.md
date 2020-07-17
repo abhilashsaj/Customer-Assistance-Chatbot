@@ -1,49 +1,34 @@
-# Online Restaurant App
+# Customer Assistance App
 
 ## App features
-### 1. Food Ordering
-    Add, delete from cart 
-    Search
-    Edit Order
-    Cancel Order
-    Order Tracking
 
-### 2. Complaints
+### Complaints
+
     Food not delivered
+    
     Wrong item
+    
     Item missing
+    
     Item out of stock
+    
     Late delivery
+    
     Cold Food
+    
     Food Quality
+    
     Suggestions/Improvements
 
-### 3. Rating
-    Delivery rating
-    Food Rating
-    Comments
-
-### 4. Location Detection
-    GPS coordinates to address.
-    Manual addressing 
 
 ## Components 
 
 * Text View
 
-* Image View
-
 * Scroll View
 
 * Switch
 
-* Radio Button
-
-* Rating Bar
-
-* Search View
-
-* MapView
 
 ## API/ services
 
