@@ -92,8 +92,8 @@ public class MainActivity extends AppCompatActivity {
         //Watson Text-to-Speech Service on IBM Cloud
         final TextToSpeech textService = new TextToSpeech();
         //Use "apikey" as username and apikey values as password
-        textService.setUsernameAndPassword("apikey", "<TEXT_TO_SPEECH_API_KEY_VALUE>");
-        textService.setEndPoint("<TEXT_TO_SPEECH_URL>");
+        textService.setUsernameAndPassword("apikey", "AsnHNiFUV8hf65M6jGsUXe1bOgv9IK3DFb2AyNrW33wi");
+        textService.setEndPoint("https://api.au-syd.text-to-speech.watson.cloud.ibm.com/instances/16213b11-3f07-4519-97e1-e93a29e563e3");
 
         int permission = ContextCompat.checkSelfPermission(this,
                 Manifest.permission.RECORD_AUDIO);
@@ -291,9 +291,9 @@ public class MainActivity extends AppCompatActivity {
     private void recordMessage() {
         speechService = new SpeechToText();
         //Use "apikey" as username and apikey as your password
-        speechService.setUsernameAndPassword("apikey", "<SPEECH_TO_TEXT_API_VALUE>");
+        speechService.setUsernameAndPassword("apikey", "dxnYGVQPWjeMr2oVDsSOOpgiev-zcwcf78sXz1rd1D4B");
         //Default: https://stream.watsonplatform.net/text-to-speech/api
-        speechService.setEndPoint("<SPEECH_TO_TEXT_URL>");
+        speechService.setEndPoint("https://api.au-syd.speech-to-text.watson.cloud.ibm.com/instances/5244418d-4e3d-4496-b058-232882a671f6");
 
         if(listening != true) {
             capture = microphoneHelper.getInputStream(true);
