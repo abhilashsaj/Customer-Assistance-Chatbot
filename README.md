@@ -47,9 +47,7 @@
     API Key: dxnYGVQPWjeMr2oVDsSOOpgiev-zcwcf78sXz1rd1D4B
     
     URL: https://api.au-syd.speech-to-text.watson.cloud.ibm.com/instances/5244418d-4e3d-4496-b058-232882a671f6
-
-
-​    
+   
 #### Watson Assistant-rh
 
     API Key: b4Vo1f_gHgEHJ33VH1NG0Zn2p4gXLmR6fdHQv1WvLJEH
