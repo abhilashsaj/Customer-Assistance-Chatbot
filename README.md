@@ -2,6 +2,12 @@
 
 ## App features
 
+### Speech Recognition
+    
+    Speech to text
+    
+    Text to Speech
+
 ### Complaints
 
     Order Cancellaton
