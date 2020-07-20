@@ -1,4 +1,4 @@
-# Customer Assistance App
+# Customer Assistance Chatbot
 
 ## App features
 
