@@ -33,10 +33,11 @@
 
 * Text View
 
-* Scroll View
+* Recycler View
 
-* Switch
+* Button
 
+* Image View
 
 ## API/ services
 
@@ -62,7 +63,7 @@
 
 ## Data storage
 
-* Google Firebase
+* Watson Assistant
 
 ------
 
