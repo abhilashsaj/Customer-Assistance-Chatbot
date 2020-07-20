@@ -1,8 +1,8 @@
 package com.example.vmac.WatBot;
 
-/**
- * Created by VMac on 17/05/17.
- */
+
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 
 import com.ibm.watson.developer_cloud.speech_to_text.v1.model.RecognizeOptions;
 import com.ibm.watson.developer_cloud.speech_to_text.v1.model.SpeakerLabelsResult;
@@ -29,42 +29,25 @@ public class SpeakerLabelsDiarization {
         private Boolean spLabelIsFinal;
 
 
-        /**
-         * Instantiates a new reco token.
-         *
-         * @param speechTimestamp the speech timestamp
-         */
+
         RecoToken(SpeechTimestamp speechTimestamp) {
             startTime = speechTimestamp.getStartTime();
             endTime = speechTimestamp.getEndTime();
             word = speechTimestamp.getWord();
         }
 
-        /**
-         * Instantiates a new reco token.
-         *
-         * @param speakerLabel the speaker label
-         */
         RecoToken(SpeakerLabelsResult speakerLabel) {
             startTime = Double.valueOf(speakerLabel.getFrom());
             endTime = Double.valueOf(speakerLabel.getTo());
             speaker = speakerLabel.getSpeaker();
         }
 
-        /**
-         * Update from.
-         *
-         * @param speechTimestamp the speech timestamp
-         */
+
         public void updateFrom(SpeechTimestamp speechTimestamp) {
             word = speechTimestamp.getWord();
         }
 
-        /**
-         * Update from.
-         *
-         * @param speakerLabel the speaker label
-         */
+
         public void updateFrom(SpeakerLabelsResult speakerLabel) {
             speaker = speakerLabel.getSpeaker();
         }
@@ -108,6 +91,7 @@ public class SpeakerLabelsDiarization {
          *
          * @param speechResults the speech results
          */
+        @RequiresApi(api = Build.VERSION_CODES.N)
         public void add(SpeechRecognitionResults speechResults) {
             if (speechResults.getResults() != null)
                 for (int i = 0; i < speechResults.getResults().size(); i++) {
@@ -148,6 +132,7 @@ public class SpeakerLabelsDiarization {
          *
          * @param speakerLabel the speaker label
          */
+        @RequiresApi(api = Build.VERSION_CODES.N)
         public void add(SpeakerLabelsResult speakerLabel) {
             RecoToken recoToken = recoTokenMap.get(speakerLabel.getFrom());
             if (recoToken == null) {
@@ -176,6 +161,7 @@ public class SpeakerLabelsDiarization {
         /**
          * Report.
          */
+        @RequiresApi(api = Build.VERSION_CODES.N)
         public void report() {
             List<Utterance> uttterances = new ArrayList<Utterance>();
             Utterance currentUtterance = new Utterance(0, "");
