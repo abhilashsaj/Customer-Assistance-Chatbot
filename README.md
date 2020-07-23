@@ -8,6 +8,13 @@
     
     Text to Speech
 
+### NLP
+    
+    Intent, Entity Recognition
+    
+    Dialog Flow
+    
+    
 ### Complaints
 
     Order Cancellaton
